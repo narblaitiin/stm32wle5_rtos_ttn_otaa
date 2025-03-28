@@ -5,8 +5,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-#ifndef APP_LORAWAN__H
-#define APP_LORAWAN__H
+#ifndef APP_LORAWAN_H
+#define APP_LORAWAN_H
 
 //  ======== includes =============================================
 #include <zephyr/device.h>
@@ -21,7 +21,7 @@
 #define LED_TX                  DT_ALIAS(ledtx)      // declared in device tree 
 #define LED_RX                  DT_ALIAS(ledrx)      // declared in device tree
 #define DELAY 			        K_MSEC(30000)
-//#define DELAY 			        K_MINUTES(1)
+#define MAX_SAMPLES             9            
 
 /* customize based on network configuration */
 #define LORAWAN_DEV_EUI			{ 0x70, 0xB3, 0xD5, 0x7E, 0xD0, 0x06, 0x21, 0xA5 }

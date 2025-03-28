@@ -5,8 +5,8 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
- #include "app_lorawan.h"
- #include "app_flash.h"
+#include "app_lorawan.h"
+#include "app_flash.h"
 
 //  ======== globals ============================================
 static const struct gpio_dt_spec led_tx = GPIO_DT_SPEC_GET(LED_TX, gpios);
@@ -89,7 +89,6 @@ int8_t app_lorawan_init(const struct device *dev)
 
 	// configuration of lorawan parameters 
     join_cfg.mode = LORAWAN_ACT_OTAA;
-//	join_cfg.mode = LORAWAN_CLASS_A;
 	join_cfg.dev_eui = dev_eui;
 	join_cfg.otaa.join_eui = join_eui;
 	join_cfg.otaa.app_key = app_key;
