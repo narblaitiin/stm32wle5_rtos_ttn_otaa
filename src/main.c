@@ -49,7 +49,7 @@ int8_t main(void)
 	while (1) {
 		// constrution of random data structure
 		data.vbat = sys_rand16_get() % (100 - 0 + 1) + 0;
-		data.temp = -15 + sys_rand16_get() % (50 - 25 +1);
+		data.temp = (sys_rand16_get() % (50 - (-15) + 1)) + (-15);
 		data.hum = sys_rand16_get() % (100 - 0 + 1) + 0;
 		data.vadc = sys_rand16_get() % (3300 - 0 + 1) + 0;
 
