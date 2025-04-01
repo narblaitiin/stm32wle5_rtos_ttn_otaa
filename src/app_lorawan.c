@@ -77,7 +77,8 @@ int8_t app_lorawan_init(const struct device *dev)
 	}
 
 	// enable ADR
-    lorawan_enable_adr(false);
+    // lorawan_enable_adr(false);
+	lorawan_enable_adr(true);
 
     // enable callbacks
 	struct lorawan_downlink_cb downlink_cb = {
